@@ -8,7 +8,7 @@ This tutorial outlines the setup of on-premise Active Directory, connecting to a
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure for creating a Virtual Machine
+- Microsoft Azure for creating Virtual Machines
 - Active Directory (On-premise)
 
 <h2>Operating System Used</h2>
@@ -21,15 +21,14 @@ This tutorial outlines the setup of on-premise Active Directory, connecting to a
 - Creation of an Azure Virtual Machine (VM) with Windows 10 Pro as a client computer
 - Creation of an Azure Virtual Machine (VM) with Windows Server 2022 as a domain controller
     - This domain controller has been setup with a static IP on its virtual network interface card
-- Connecting to the VMs using Remote Desktop Connection
+- Connecting to the VMs using Remote Desktop Connection with their created public IPs, usernames and passwords
 <br />
 
-<h2>Installation Steps</h2>
+<h2>Setup a Connection Between the Client and Domain Controller</h2>
 
-<h3>Enable IIS in Windows</h3>
-<p>Open Control Panel and select Programs and Features.</p>
-<p>On the left menu, click on 'Turn Windows features on or off'.</p>
+<p>Using Remote Desktop Connection, log into the Client virtual machine.</p>
+<p>'Ping -t' the domain controller VM from the Command Line. Use its private IP.</p>
 <p>
-<img src="https://github.com/darrylbartlett/osticket-install/assets/159499839/7b71ffbb-56be-42d4-8c11-8a44279a625e"/>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/436b1683-b6f1-43f1-8ca4-88fa1ba0fc59"/>
 </p>
 <br />
