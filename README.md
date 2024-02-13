@@ -29,6 +29,6 @@ This tutorial outlines the setup of on-premise Active Directory, connecting to a
 <p>Using Remote Desktop Connection, log into the Client virtual machine.</p>
 <p>'Ping -t' the domain controller VM from the Command Line. Use its private IP.</p>
 <p>
-<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/436b1683-b6f1-43f1-8ca4-88fa1ba0fc59"/>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/c595fc7d-d1f6-431e-a955-d2c83c9b3895"/>
 </p>
 <br />
