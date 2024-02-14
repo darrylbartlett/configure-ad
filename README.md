@@ -3,7 +3,7 @@
 </p>
 
 <h1>Active Directory (On-premise) Setup</h1>
-This tutorial outlines the setup of on-premise Active Directory, connecting to a client computer, and managing different containers and user accounts.<br />
+This tutorial outlines the setup of on-premise Active Directory, managing different containers and user accounts, and connecting to a client computer .<br />
 
 
 <h2>Environments and Technologies Used</h2>
@@ -125,9 +125,6 @@ This tutorial outlines the setup of on-premise Active Directory, connecting to a
 <p>The remote session will restart after the install is done.</p>
 <p>Log back in using the new domain name you created with your local admin username and password.</p>
 <p><i>Ex. Username should be entered like this: dbdomain.com\username</i></p>
-<p>
-<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/7c710606-54dd-4c09-8dda-3990269464cc"/>
-</p>
 <br />
 
 <h2>Create Organizational Units and An Admin User Account</h2>
@@ -218,6 +215,103 @@ This tutorial outlines the setup of on-premise Active Directory, connecting to a
 
 <br />
 
+<h2>Connect the Client to the Domain</h2>
 
+<p>The domain controllers private IP address can be setup under the Client VM’s DNS settings in Azure. This is the domain controller’s IP that was changed to be static as part of the prerequisites. The Client needs to be restarted in Azure after the DNS has been updated.</p>
 
+<p>Log back into the Client VM after the DNS changes are finished.</p>
+<p>Go to the Start Menu and open the Settings window. On the Settings screen, select About from the bottom of the left menu.</p>
+<p>On the right-side of the screen under the ‘Related settings’ options, select ‘Advanced system settings’.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/145df1ce-4e6a-4084-87a6-1379b792c435"/>
+</p>
+<br />
 
+<p>The System Properties window will open. Select the Computer Name tab. Click on the Change button.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/8de2ee58-d71e-4101-bed2-aade12de7ddf"/>
+</p>
+<br />
+
+<p>The Computer Name/Domain Changes window will open. Now we can connect to the new domain.</p>
+<p>Under ‘Member of’, click the option button for Domain. Type in your domain name and click OK.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/7eccc5ea-dd2a-4d12-a3f3-06e0fa89db2b"/>
+</p>
+<br />
+
+<p>If everything is setup okay, you should get prompted to enter a username and password. Enter the username and password for jane_admin. Remember to use the domain name as part of the username.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/21263ed4-24fa-43a6-9d60-5d3478c59ef2"/>
+</p>
+<br />
+
+<p>Click OK. You should be welcomed to the domain.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/44d9fd37-916a-41da-9956-ecc2ed5ee3c5"/>
+</p>
+<br />
+
+<p>Click OK. You will be prompted to restart the computer. Click OK.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/2cc9ff4a-9f11-4608-99ee-a635f05c57c2"/>
+</p>
+<br />
+
+<p>Click Close on the System Properties window.</p>
+<p>Click the Restart Now button.</p>
+<br />
+
+<p>Go back to the domain controller.</p>
+<p>From the Start Menu, open Active Directory Users and Computers.</p>
+<p>Select the Computers container on the left of the screen. The Client computer should be there.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/540c0c7c-681d-4254-9c0c-c6adc577edf0"/>
+</p>
+
+<p>Create another Organizational Unit called _CLIENTS. Click and drag the Client computer into _CLIENTS.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/60d7a542-4409-44f5-ae26-5767e327337e"/>
+</p>
+
+<h2>Setup Access to Remote Desktop for All Non-admin Users Using the Client</h2>
+
+<p>Log back into the Client VM using jane_admin.</p>
+<p>Open the Settings screen. On the right-side of the screen, under ‘Related settings’, click ‘Remote desktop’.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/26db4916-9447-4947-b97d-526c6e250103"/>
+</p>
+
+<p>At the bottom of the Remote Desktop screen, click on ‘Select users that can remotely access this PC’.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/6f9d1a15-968b-4ca3-a9da-76abf5fbfa4e"/>
+</p>
+
+<p>On the Remote Desktop Users window, click the Add button.</p>
+<p>Type ‘domain users’ into the text box, and select Check Names.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/0c0361f7-3b06-4459-9c38-844e0e95044a"/>
+</p>
+
+<p>Click OK.</p>
+<p>All non-admin users can login using remote desktop from the Client computer. Click OK.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/eee90fc5-18d6-4680-81bc-0fa8c066bf40"/>
+</p>
+
+<h2>Create a Non-admin User Account</h2>
+
+<p>Go back to the domain controller computer.</p>
+<p>Create another user named John Doe (username: john_user). This will be a non-admin account.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/986918fd-e682-4af6-b2e7-756ec26fbfa4"/>
+</p>
+
+<p>Create a password and uncheck the option to change the password at logon.</p>
+<p>Click and drag John Doe into _EMPLOYEES.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/5778086d-ae54-4c8d-8d3f-21e7ddcfa00a"/>
+</p>
+
+<p>Go back to the Client computer and close the remote desktop session for jane_admin.</p>
+<p>Login with the new john_user account to verify a normal user can login from the client computer.</p>
