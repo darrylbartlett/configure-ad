@@ -32,3 +32,38 @@ This tutorial outlines the setup of on-premise Active Directory, connecting to a
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/c595fc7d-d1f6-431e-a955-d2c83c9b3895"/>
 </p>
 <br />
+
+<p>Log into the domain controller VM.</p>
+<p>From the Start Menu, open 'Windows Defender Firewall with Advanced Security'.</p>
+<p>On the left panel, select Inbound Rules.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/c2e1c22a-3092-4ee8-9a96-7111c382f39b"/>
+</p>
+<br />
+
+<p>In the middle panel where the Inbound Rules are displayed, click on Protocol to sort by this column.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/c822edc5-b083-4ed9-891f-b412912c3fe7"/>
+</p>
+<br />
+
+<p>Under the Protocol column, find the rows with ICMPv4.</p>
+<p>Select the two rows called 'Core Networking Diagnostics – ICMP Echo Request (ICMPv4-In)'.</p>
+<p>Right-click on one of the highlighted rows and select Enable Rule from the sub-menu.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/e28a309d-ed58-4789-ba1e-8c3fe534796a"/>
+</p>
+<br />
+
+<p>Both rows should be showing a green check mark beside them.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/489725e3-ad11-4d32-af17-1f55634a7d78"/>
+</p>
+<br />
+
+<p>Go back to the Client VM and see if the ping shows connection.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/3680108d-e563-4406-a983-4b48fcd19a07"/>
+</p>
+<br />
+
