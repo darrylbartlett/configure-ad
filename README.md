@@ -150,13 +150,74 @@ This tutorial outlines the setup of on-premise Active Directory, connecting to a
 </p>
 <br />
 
-
-
-<p>To do this, right-click on the domain name on the left side of the screen. Select New on the sub-menu and then select Organizational Unit.</p>
+<p>Enter the name of the Organizational Unit.</p>
 <p>
-<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/6a84d6d3-43f2-4dff-84cc-0fcb9e39faad"/>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/d52e0922-9a35-4d68-9e6a-938c016453d8"/>
+</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/330234c6-8685-41e9-b1a9-7d37b4a98c4c"/>
 </p>
 <br />
+
+<p>Create a new employee named Jane Doe. Her username will be jane_admin.</p>
+<p>To do this, right-click on the domain name. Select New on the menu and then choose User.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/e7ab51d5-fdb2-480b-972e-6c72c459390e"/>
+</p>
+<br />
+
+<p>Fill out the information for Jane Doe and then click Next.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/8fa42b6e-9864-447d-9c83-ea4d916c5c68"/>
+</p>
+<br />
+
+<p>Enter a password for the user. Uncheck the box beside ‘User must change password at next logon’.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/71605182-0d21-4f7e-a441-264446b8b4f4"/>
+</p>
+<br />
+
+<p>Click Next and then click Finish.</p>
+<p>Jane Doe will show on the right side of the screen. Drag her name into the _ADMINS organizational unit. You’ll be asked if you want to move this object. Click Yes.</p>
+<p>Select _ADMINS on the left side. Jane Doe should be available inside _ADMINS.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/a50b23c7-6f20-4aec-8d06-bcad8673ed6a"/>
+</p>
+<br />
+
+<p>Since Jane is an admin, we’ll add her to the Domain Admins security group.</p>
+<p>Right-click on Jane Doe. Select Properties on the menu.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/20c87a6b-77fc-4e16-bea0-1a8ee6556a77"/>
+</p>
+<br />
+
+<p>In the Properties window, click on the Member Of tab. Click the Add button.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/f467e780-e45f-479d-8b72-13dd9ccdf220"/>
+</p>
+<br />
+
+<p>Type ‘domain admins’ in the text box. Click on the Check Names button.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/3b49a471-c5ac-434a-9b86-db002a827045"/>
+</p>
+<br />
+
+<p>Click OK.</p>
+<p>Jane Doe is a part of the Domain Admins group. Click Apply and then click OK.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/22e68395-214e-4f6a-8928-c58e6ef4600d"/>
+</p>
+<br />
+
+<p>Now logout/close your remote desktop session and log back in as jane_admin.</p>
+
+- jane_admin can be used as the new admin account
+
+<br />
+
 
 
 
