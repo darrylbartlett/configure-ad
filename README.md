@@ -124,9 +124,37 @@ This tutorial outlines the setup of on-premise Active Directory, connecting to a
 
 <p>The remote session will restart after the install is done.</p>
 <p>Log back in using the new domain name you created with your local admin username and password.</p>
-<p><i>Ex. dbdomain.com\username</i></p>
+<p><i>Ex. Username should be entered like this: dbdomain.com\username</i></p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/7c710606-54dd-4c09-8dda-3990269464cc"/>
+</p>
+<br />
+
+<h2>Create Organizational Units and An Admin User Account</h2>
+
+<p>Open Server Manager.</p>
+<p>At the top right-hand corner, select the Tools menu and click Active Directory Users and Computers (this can also be found through the Start Menu).</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/41f6f968-3e77-446d-9e4c-62d5b5a9940a"/>
+</p>
+<br />
+
+<p>Create Organizational Units for:</p>
+
+- _EMPLOYEES
+- _ADMINS
+
+<p>To do this, right-click on the domain name on the left side of the screen. Select New on the sub-menu and then select Organizational Unit.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/6a84d6d3-43f2-4dff-84cc-0fcb9e39faad"/>
+</p>
+<br />
+
+
+
+<p>To do this, right-click on the domain name on the left side of the screen. Select New on the sub-menu and then select Organizational Unit.</p>
+<p>
+<img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/6a84d6d3-43f2-4dff-84cc-0fcb9e39faad"/>
 </p>
 <br />
 
