@@ -67,6 +67,9 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 </p>
 <br />
 
+<p>The connection has been enabled between the Client and the Domain Controller.</p>
+<br />
+
 <h2>Install Active Directory</h2>
 
 <p>Go back to the domain controller VM and open Server Manager <i>(it may already be open by default).</i></p>
