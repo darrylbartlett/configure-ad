@@ -280,7 +280,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 <h2>Setup Access to Remote Desktop for All Non-admin Users Using the Client</h2>
 
 <p>Log back into the Client VM using jane_admin.</p>
-<p>Open the Settings screen. On the left menu, select About. On the right-side of the screen, under ‘Related settings’, click ‘Remote desktop’.</p>
+<p>Open the Settings screen. On the left menu, select About. On the right-side of the screen, under Related settings, click ‘Remote desktop’.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/26db4916-9447-4947-b97d-526c6e250103"/>
 </p>
