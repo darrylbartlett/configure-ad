@@ -193,7 +193,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 </p>
 <br />
 
-<p>In the Properties window, click on the 'Member of' tab. Click the Add button.</p>
+<p>In the Properties window, click on the 'Member Of' tab. Click the Add button.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/f467e780-e45f-479d-8b72-13dd9ccdf220"/>
 </p>
@@ -243,7 +243,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 </p>
 <br />
 
-<p>If everything is setup okay, you should get prompted to enter a username and password. Enter the username and password for jane_admin. Remember to use the domain name as part of the username.</p>
+<p>If everything is setup correctly, you should get prompted to enter a username and password. Enter the username and password for jane_admin. Remember to use the domain name as part of the username.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/21263ed4-24fa-43a6-9d60-5d3478c59ef2"/>
 </p>
@@ -280,7 +280,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 <h2>Setup Access to Remote Desktop for All Non-admin Users Using the Client</h2>
 
 <p>Log back into the Client VM using jane_admin.</p>
-<p>Open the Settings screen. On the right-side of the screen, under ‘Related settings’, click ‘Remote desktop’.</p>
+<p>Open the Settings screen. On the left menu, select About. On the right-side of the screen, under ‘Related settings’, click ‘Remote desktop’.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/26db4916-9447-4947-b97d-526c6e250103"/>
 </p>
