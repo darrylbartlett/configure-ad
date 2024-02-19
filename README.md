@@ -35,7 +35,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 
 <p>Log into the domain controller VM.</p>
 <p>From the Start Menu, open 'Windows Defender Firewall with Advanced Security'.</p>
-<p>On the left panel, select Inbound Rules.</p>
+<p>On the left panel, select 'Inbound Rules'.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/c2e1c22a-3092-4ee8-9a96-7111c382f39b"/>
 </p>
@@ -49,7 +49,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 
 <p>Under the Protocol column, find the rows with ICMPv4.</p>
 <p>Select the two rows called 'Core Networking Diagnostics – ICMP Echo Request (ICMPv4-In)'.</p>
-<p>Right-click on one of the highlighted rows and select Enable Rule from the sub-menu.</p>
+<p>Right-click on one of the highlighted rows and select 'Enable Rule' from the sub-menu.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/e28a309d-ed58-4789-ba1e-8c3fe534796a"/>
 </p>
@@ -74,7 +74,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 
 <p>Go back to the domain controller VM and open Server Manager <i>(it may already be open by default).</i></p>
 <p>At the top right-hand corner, click on the Manage menu.</p>
-<p>Select Add Roles and Features.</p>
+<p>Select 'Add Roles and Features'.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/8c6fc435-cb9e-4090-bc5b-4c4a98be964d"/>
 </p>
@@ -125,7 +125,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 </p>
 <br />
 
-<p>The remote session will restart after the install is done.</p>
+<p>The remote desktop session will restart after the install is done.</p>
 <p>Log back in using the new domain name you created with your local admin username and password.</p>
 <p><i>Ex. Username should be entered like this: dbdomain.com\username</i></p>
 <br />
@@ -133,7 +133,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 <h2>Create Organizational Units and An Admin User Account</h2>
 
 <p>Open Server Manager.</p>
-<p>At the top right-hand corner, select the Tools menu and click Active Directory Users and Computers (this can also be found through the Start Menu).</p>
+<p>At the top right-hand corner, select the Tools menu and click 'Active Directory Users and Computers' (this can also be found through the Start Menu).</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/41f6f968-3e77-446d-9e4c-62d5b5a9940a"/>
 </p>
@@ -144,7 +144,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 - _EMPLOYEES
 - _ADMINS
 
-<p>To do this, right-click on the domain name on the left side of the screen. Select New on the sub-menu and then select Organizational Unit.</p>
+<p>To do this, right-click on the domain name on the left side of the screen. Select New on the sub-menu and then select 'Organizational Unit'.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/6a84d6d3-43f2-4dff-84cc-0fcb9e39faad"/>
 </p>
@@ -193,13 +193,13 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 </p>
 <br />
 
-<p>In the Properties window, click on the Member Of tab. Click the Add button.</p>
+<p>In the Properties window, click on the 'Member of' tab. Click the Add button.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/f467e780-e45f-479d-8b72-13dd9ccdf220"/>
 </p>
 <br />
 
-<p>Type ‘domain admins’ in the text box. Click on the Check Names button.</p>
+<p>Type ‘domain admins’ in the text box. Click on the 'Check Names' button.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/3b49a471-c5ac-434a-9b86-db002a827045"/>
 </p>
@@ -230,7 +230,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 </p>
 <br />
 
-<p>The System Properties window will open. Select the Computer Name tab. Click on the Change button.</p>
+<p>The System Properties window will open. Select the 'Computer Name' tab. Click on the Change button.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/8de2ee58-d71e-4101-bed2-aade12de7ddf"/>
 </p>
@@ -266,7 +266,7 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 <br />
 
 <p>Go back to the domain controller.</p>
-<p>From the Start Menu, open Active Directory Users and Computers.</p>
+<p>From the Start Menu, open 'Active Directory Users and Computers'.</p>
 <p>Select the Computers container on the left of the screen. The Client computer should be there.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/540c0c7c-681d-4254-9c0c-c6adc577edf0"/>
@@ -291,13 +291,13 @@ This tutorial outlines the setup of on-premise Active Directory, managing differ
 </p>
 
 <p>On the Remote Desktop Users window, click the Add button.</p>
-<p>Type ‘domain users’ into the text box, and select Check Names.</p>
+<p>Type ‘domain users’ into the text box, and select 'Check Names'.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/0c0361f7-3b06-4459-9c38-844e0e95044a"/>
 </p>
 
 <p>Click OK.</p>
-<p>All non-admin users can login using remote desktop from the Client computer. Click OK.</p>
+<p>All non-admin users can now login using remote desktop from the Client computer. Click OK.</p>
 <p>
 <img src="https://github.com/darrylbartlett/configure-ad/assets/159499839/eee90fc5-18d6-4680-81bc-0fa8c066bf40"/>
 </p>
